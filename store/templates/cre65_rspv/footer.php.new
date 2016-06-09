@@ -1,0 +1,462 @@
+<?php
+/*
+  $Id: footer.php,v 1.0 2008/06/23 00:18:17 datazen Exp $
+
+  CRE Loaded, Open Source E-Commerce Solutions
+  http://www.creloaded.com
+
+  Copyright (c) 2008 CRE Loaded
+  Copyright (c) 2008 AlogoZone, Inc.
+  Copyright (c) 2003 osCommerce
+
+  Released under the GNU General Public License
+*/
+// RCI top
+echo $cre_RCI->get('footer', 'top');
+if (DOWN_FOR_MAINTENANCE =='false' || DOWN_FOR_MAINTENANCE_FOOTER_OFF =='false') {
+  require(DIR_WS_INCLUDES . 'counter.php');
+  ?>
+  <style>
+    .list-unstyled{font-family: roboto;}
+
+ #footer   ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: square;
+}
+#footer ol, #footer ul {
+    list-style: none;
+}
+    
+#footer {
+    
+    background-color: #F0F0ED ! important;
+    float: left;
+    width: 100%;
+    min-width: 1200px;
+    background: #fff;
+    margin-top: 50px;
+    padding-top: 30px;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#footer-widgets {
+    width: 1200px;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: left;
+}
+.footer-widget {
+    float: left;
+    margin-left: 6%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#footer-widgets div:first-child {
+    margin-left: 0;
+}
+.footer-widget .widget {
+    padding: 0;
+    margin-bottom: 30px;
+}
+.footer-widget .widget strong {
+    color: #33363c;
+}
+.footer-whole {
+    width: 100%;
+}
+.footer-half {
+    width: 47%;
+}
+.footer-third {
+    width: 29.33%;
+}
+.footer-fourth {
+    width: 20.5%;
+}
+.footer-fifth {
+    width: 15.2%;
+}
+.footer-widget .widget .widgettitle {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0;
+    border: 0;
+    margin: 0 0 15px 0;
+}
+.footer-1 .widget .widgettitle {
+    color: #26282d;
+}
+.footer-2 .widget .widgettitle {
+    color: #77af12;
+}
+.footer-3 .widget .widgettitle {
+    color: #d73e3a;
+}
+.footer-4 .widget .widgettitle {
+    color: #ff8b04;
+}
+.footer-5 .widget .widgettitle {
+    color: #2f9bc1;
+}
+.footer-fourth #searchbar {
+    width: 100px;
+}
+.footer-widget-inner textarea {
+    height: 75px;
+}
+.footer-fourth #contact-form .textfield {
+    width: 125px;
+}
+#copyright {
+    float: left;
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 11px;
+    line-height: 17px;
+    color: #aaa;
+}
+#nav {
+    float: right;
+    position: relative;
+    z-index: 998;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#nav .menu {
+    float: left;
+    margin: 5px 0 0 0;
+    list-style-type: none;
+    list-style-position: outside;
+}
+#nav ul.menu:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+#nav .menu li {
+    float: left;
+    position: relative;
+    list-style-type: none;
+    margin: 0 0 0 5px;
+    padding: 0;
+}
+#nav .menu li:first-child {
+    margin-left: 0;
+}
+#nav .menu li a {
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 13px;
+    font-weight: bold;
+}
+#nav .menu li a:hover, #nav .menu li:hover>a {
+    color: #fff;
+    background: #26282d;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+#nav .menu .sub-menu {
+    display: none;
+    position: absolute;
+    background: #26282d;
+    width: 200px;
+    z-index: 998;
+    top: 22px;
+    left: auto;
+    margin: 0;
+    padding: 10px 13px;
+    -webkit-border-radius: 8px;
+    -webkit-border-top-left-radius: 0;
+    -moz-border-radius: 8px;
+    -moz-border-radius-topleft: 0;
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#nav .menu li:hover>.sub-menu {
+    display: block;
+}
+#nav .menu .sub-menu li {
+    margin: 0;
+    width: 100%;
+}
+#nav .menu .sub-menu li a {
+    display: block;
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 5px 0 0 0;
+    color: #99a1b1;
+}
+#nav .menu .sub-menu li a:hover {
+    color: #fff;
+    background: none;
+}
+#nav .left-nav .sub-menu {
+    right: 0;
+    -webkit-border-radius: 8px;
+    -webkit-border-top-right-radius: 0;
+    -moz-border-radius: 8px;
+    -moz-border-radius-topright: 0;
+    border-radius: 8px;
+    border-top-right-radius: 0;
+}
+#nav .menu .sub-menu li ul {
+    top: auto;
+    left: 170px;
+    margin-top: -10px;
+}
+#nav .left-nav .sub-menu li ul {
+    left: -200px;
+}
+#mobile-nav-button {
+    cursor: pointer;
+    float: right;
+    display: none;
+    font-size: 13px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    padding: 9px 15px;
+    background-color: #77af12;
+}
+#mobile-nav.auto-height {
+    height: auto!important;
+}
+#mobile-nav-button:hover, #mobile-nav-button.gp-active {
+    background-color: #679710;
+}
+.gp-desktop #mobile-nav, .gp-tablet-landscape #mobile-nav {
+    display: none!important;
+}
+#mobile-nav {
+    display: none;
+    float: left;
+    width: 100%;
+    clear: both;
+    margin-top: 15px;
+}
+#mobile-nav li {
+    position: relative;
+    list-style-type: none;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin: 0;
+}
+#mobile-nav .menu li a {
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    padding: 15px 10px;
+    font-weight: bold;
+}
+#mobile-nav .menu li>a:hover {
+    color: #fff;
+    background: #26282d;
+}
+#mobile-nav .menu li>.mobile-dropdown-icon {
+    font-family: 'FontAwesome';
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    padding: 0 25px;
+    line-height: 54px;
+}
+#mobile-nav .menu li>.mobile-dropdown-icon:before {
+    content: '\f0d7';
+}
+#mobile-nav .menu li.gp-active>.mobile-dropdown-icon:before {
+    content: '\f0d8';
+}
+#mobile-nav .menu li .sub-menu {
+    margin: 0;
+    display: none;
+}
+#mobile-nav .menu li .sub-menu li {
+    margin-left: 20px;
+}
+  </style>
+
+<div id="footer">
+  <div id="footer-widgets">
+    <div class="footer-widget footer-1 footer-fourth">
+      <div id="sendy_widget-2" class="widget widget_sendy_widget">
+        <h2 class="widgettitle">Join our Newsletter</h2>
+        <script type="text/javascript">
+                    function validate_sendy_form(){
+                        var email_id=document.getElementById('subscriber-email').value;
+                        var filter = /^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/;
+                        valid= String(email_id).search (filter) != -1;
+                        if(!valid){
+                            alert('Please enter a valid email address');
+                            return false;
+                        }
+                        else{
+                            return true;
+                        }
+                    }
+                </script>
+        <form id="subscribe-form" onsubmit="return  validate_sendy_form()" action="http://sendy.loadedcommerce.com/subscribe" method="POST" accept-charset="utf-8">
+          <label for="name">Name</label>
+          <br>
+          <input name="name" id="subscriber-name" type="text" class="form-control">
+          <br>
+          <label for="email">Email</label>
+          <br>
+          <input name="email" id="subscriber-email" type="text" class="form-control">
+          <br>
+          <div>
+            <input class="list" name="list" value="Ixu763r2CzZz1JqTYOSwxBzg" type="hidden">
+          </div>
+          <input name="sub-submit" value="Subscribe" id="sub-submit" type="submit" class="btn btn-primary">
+          <div class="resp"></div>
+        </form>
+      </div>
+      <div id="nav_menu-4" class="widget widget_nav_menu">
+        <h2 class="widgettitle">Get Support</h2>
+        <div class="menu-support-container">
+          <ul id="menu-support" class="menu">
+            <li id="menu-item-1112" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1112"><a>Get Support</a>
+              <ul class="sub-menu">
+                <li id="menu-item-1104" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1104"><a href="/support/support-overview/">Support Overview</a></li>
+                <li id="menu-item-1105" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1105"><a target="_blank" href="http://support.loadedcommerce.com">Ticket Center</a></li>
+                <li id="menu-item-228287" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-228287"><a href="/community/forums/">Community Forums</a></li>
+                <li id="menu-item-228288" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-228288"><a href="/support/guides/">User Guides</a></li>
+                <li id="menu-item-368776" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-368776"><a target="_blank" href="https://github.com/loadedcommerce/loaded7/issues/new">Request Feature or Report Bug</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-widget footer-2 footer-fourth">
+      <div id="nav_menu-2" class="widget widget_nav_menu">
+        <h2 class="widgettitle">Loaded Commerce</h2>
+        <div class="menu-company-container">
+          <ul id="menu-company" class="menu">
+            <li id="menu-item-1110" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1110"><a href="/home/company/about-us">Company</a>
+              <ul class="sub-menu">
+                <li id="menu-item-1100" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1100"><a href="/home/company/about-us">About Us</a></li>
+                <li id="menu-item-1779" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1779"><a href="http://www.loadedcommerce.com/home/company/contact-us/">Contact Us</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="nav_menu-3" class="widget widget_nav_menu">
+        <h2 class="widgettitle">Partner With Us</h2>
+        <div class="menu-partner-with-us-container">
+          <ul id="menu-partner-with-us" class="menu">
+            <li id="menu-item-1111" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1111"><a href="/home/partner-with-us/partner/">Partner With Us</a>
+              <ul class="sub-menu">
+                <li id="menu-item-3873" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3873"><a href="http://www.loadedcommerce.com/home/partner-with-us/partner/">Overview</a></li>
+                <li id="menu-item-1801" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1801"><a href="http://www.loadedcommerce.com/home/partner-with-us/loaded-for-web-hosts/">Web Host Program</a></li>
+                <li id="menu-item-3874" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3874"><a href="http://www.loadedcommerce.com/home/partner-with-us/partner-inquiry/">Partner Inquiry</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-widget footer-3 footer-fourth">
+      <div id="recent-posts-6" class="widget widget_recent_entries">
+        <h2 class="widgettitle">Loaded Blog</h2>
+        <ul>
+          <li> <a href="http://www.loadedcommerce.com/beta-download-for-6-5-3-ce-mobile-responsive-available-for-testing/">Beta download for 6.5.3 CE Mobile Responsive available for testing</a> <span class="post-date">January 28, 2016</span> </li>
+          <li> <a href="http://www.loadedcommerce.com/mobile-template-for-6-x-stores-available/">Mobile Template for 6.x stores available</a> <span class="post-date">September 24, 2015</span> </li>
+          <li> <a href="http://www.loadedcommerce.com/release-7-003-4-2-critical-fixes/">Release 7.003.4.2 – Critical Fixes</a> <span class="post-date">September 9, 2015</span> </li>
+          <li> <a href="http://www.loadedcommerce.com/company-and-product-roadmap-update-2015/">Company and Product Roadmap Update 2015</a> <span class="post-date">May 12, 2015</span> </li>
+          <li> <a href="http://www.loadedcommerce.com/7-003-3-1-released/">7.003.3.1 Released</a> <span class="post-date">April 8, 2015</span> </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-widget footer-4 footer-fourth">
+      <div id="lshowcase_widget-2" class="widget lshowcase_widget">
+        <div class="lshowcase-clear-both">&nbsp;</div>
+        <div class="lshowcase-logos">
+          <div>
+            <div class="lshowcase-wrap-normal">
+              <div class="lshowcase-box-normal">
+                <div class="lshowcase-boxInner-normal" style="width:200px; align:center; text-align:center;"><img src="http://www.loadedcommerce.com/wp-content/uploads/2014/02/Loaded-Commerce-7-logo-e1391834756894.png" alt="" title="Loaded Commerce, LLC" class="lshowcase-normal" width="200"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lshowcase-clear-both">&nbsp;</div>
+      </div>
+      <div id="text-11" class="widget widget_text">
+        <div class="textwidget">
+          <p style="padding-left:20px;font-size:90%;line-height: 120%;" align="left">(800) 609-2141 <br>
+            sales@loadedcommerce.com <br>
+            1211 CR 436 <br>
+            Lake Panasoffkee, FL 33538 <br>
+            USA</p>
+        </div>
+      </div>
+      <div id="bp_core_recently_active_widget-3" class="widget widget_bp_core_recently_active_widget buddypress widget">
+      <?php /*
+        <h2 class="widgettitle">Recently Active Members</h2>   
+        <div class="avatar-block">
+          <div class="item-avatar"> <a href="http://www.loadedcommerce.com/members/iantresman/" title="iantresman"><img src="//www.gravatar.com/avatar/73133b2c79fd120988c461e688864676?s=80&amp;r=pg&amp;d=mm" class="avatar user-4881-avatar avatar-80 photo" alt="Profile picture of iantresman" height="80" width="80"></a> </div>
+          <div class="item-avatar"> <a href="http://www.loadedcommerce.com/members/nc666/" title="nc666"><img src="//www.gravatar.com/avatar/e3b971c93b08a86b64f15de3f0d4edf7?s=80&amp;r=pg&amp;d=mm" class="avatar user-8230-avatar avatar-80 photo" alt="Profile picture of nc666" height="80" width="80"></a> </div>
+          <div class="item-avatar"> <a href="http://www.loadedcommerce.com/members/gazzanet/" title="gazzanet"><img src="//www.gravatar.com/avatar/01335fc72a568f92f83f8d63d35f29a6?s=80&amp;r=pg&amp;d=mm" class="avatar user-9185-avatar avatar-80 photo" alt="Profile picture of gazzanet" height="80" width="80"></a> </div>
+          <div class="item-avatar"> <a href="http://www.loadedcommerce.com/members/sal/" title="Sal"><img src="http://www.loadedcommerce.com/wp-content/uploads/avatars/2/1f8bdd3100a2728dd8740fb3d5640f1c-bpthumb.jpg" class="avatar user-2-avatar avatar-80 photo" alt="Profile picture of Sal" height="80" width="80"></a> </div>
+          <div class="item-avatar"> <a href="http://www.loadedcommerce.com/members/danielfinch1983/" title="danielfinch1983"><img src="//www.gravatar.com/avatar/041415760342462334ab7aafc1b3b56d?s=80&amp;r=pg&amp;d=mm" class="avatar user-616366-avatar avatar-80 photo" alt="Profile picture of danielfinch1983" height="80" width="80"></a> </div>
+          <div class="item-avatar"> <a href="http://www.loadedcommerce.com/members/dedragott/" title="dedragott"><img src="//www.gravatar.com/avatar/6bcbc51f26d7736f28e5a8b132119c56?s=80&amp;r=pg&amp;d=mm" class="avatar user-27858-avatar avatar-80 photo" alt="Profile picture of dedragott" height="80" width="80"></a> </div>
+          <div class="item-avatar"> <a href="http://www.loadedcommerce.com/members/capp/" title="Capp"><img src="//www.gravatar.com/avatar/ecd1d3dd9284ca918210e6204e1cd04b?s=80&amp;r=pg&amp;d=mm" class="avatar user-1970-avatar avatar-80 photo" alt="Profile picture of Capp" height="80" width="80"></a> </div>
+          <div class="item-avatar"> <a href="http://www.loadedcommerce.com/members/dragonflybamboo/" title="dragonflybamboo"><img src="//www.gravatar.com/avatar/2b0a5cc5af7ed27e781db7af5b137d13?s=80&amp;r=pg&amp;d=mm" class="avatar user-616365-avatar avatar-80 photo" alt="Profile picture of dragonflybamboo" height="80" width="80"></a> </div>
+          <div class="item-avatar"> <a href="http://www.loadedcommerce.com/members/geotex/" title="Geotex"><img src="//www.gravatar.com/avatar/e7c71eef962876c36512f1a1a2533503?s=80&amp;r=pg&amp;d=mm" class="avatar user-6855-avatar avatar-80 photo" alt="Profile picture of Geotex" height="80" width="80"></a> </div>
+          <div class="item-avatar"> <a href="http://www.loadedcommerce.com/members/jerdnas/" title="jerdnas"><img src="//www.gravatar.com/avatar/529dd6c1b57a6f98dc89820f9cd32c6c?s=80&amp;r=pg&amp;d=mm" class="avatar user-616364-avatar avatar-80 photo" alt="Profile picture of jerdnas" height="80" width="80"></a> </div>
+          <div class="item-avatar"> <a href="http://www.loadedcommerce.com/members/ljayne/" title="ljayne"><img src="//www.gravatar.com/avatar/b1ade61c15ab4f3ea91153010c9646eb?s=80&amp;r=pg&amp;d=mm" class="avatar user-616363-avatar avatar-80 photo" alt="Profile picture of ljayne" height="80" width="80"></a> </div>
+          <div class="item-avatar"> <a href="http://www.loadedcommerce.com/members/freddie9009/" title="freddie9009"><img src="//www.gravatar.com/avatar/5429e5d180f244b7cec49cba2017316b?s=80&amp;r=pg&amp;d=mm" class="avatar user-616362-avatar avatar-80 photo" alt="Profile picture of freddie9009" height="80" width="80"></a> </div>
+          <div class="item-avatar"> <a href="http://www.loadedcommerce.com/members/simon-cmh/" title="Simon"><img src="http://www.loadedcommerce.com/wp-content/uploads/avatars/38/d981a61efb0ac6c250fe9f06ebe202c8-bpthumb.jpg" class="avatar user-38-avatar avatar-80 photo" alt="Profile picture of Simon" height="80" width="80"></a> </div>
+          <div class="item-avatar"> <a href="http://www.loadedcommerce.com/members/jkuikka/" title="Johan Kuikka"><img src="//www.gravatar.com/avatar/531a39f3dbacad2f9d6f07f815af0061?s=80&amp;r=pg&amp;d=mm" class="avatar user-51-avatar avatar-80 photo" alt="Profile picture of Johan Kuikka" height="80" width="80"></a> </div>
+          <div class="item-avatar"> <a href="http://www.loadedcommerce.com/members/patricksame/" title="patricksame"><img src="//www.gravatar.com/avatar/a922eeb877e3ccea28fc630e27eadc70?s=80&amp;r=pg&amp;d=mm" class="avatar user-616361-avatar avatar-80 photo" alt="Profile picture of patricksame" height="80" width="80"></a> </div>
+        </div>
+        */ ?>
+      </div>
+    </div>
+  </div>
+</div>
+
+<?php
+}
+/*
+//if (!(getenv('HTTPS') == 'on')){
+  if ($banner = tep_banner_exists('dynamic', 'googlefoot')) {
+    ?>
+    <br>
+    <table border="0" width="100%" cellspacing="0" cellpadding="0" class="footer_banner">
+      <tr>
+        <td align="center"><?php echo tep_display_banner('static', $banner); ?></td>
+      </tr>
+    </table>
+    <?php
+  }
+//}
+if (SITE_WIDTH!='100%') {
+  ?>
+      </td>
+    </tr>
+  </table>  
+  <?php
+}
+// RCI bottom*/
+echo $cre_RCI->get('footer', 'bottom');
+?>
